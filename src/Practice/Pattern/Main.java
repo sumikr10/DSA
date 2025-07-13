@@ -45,7 +45,12 @@ public class Main {
 
     static void pattern5(int n){
         for(int row = 0; row < 2 * n -1 ; row++){
-            int c = 1;
+            int c;
+            if(row > n){
+                c = 2 * n - row - 1; //n - (row - n)
+            }else{
+                c = row + 1;
+            }
             for(int col = 0; col < c; col++){
                 System.out.print("*");
             }
@@ -53,4 +58,6 @@ public class Main {
 
         }
     }
+    static void pattern6(int n){}
+
 }
